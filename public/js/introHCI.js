@@ -34,5 +34,8 @@ function addProjectDetails(e) {
 
 function callBackFn(result) {
 	console.log(result);
-	$('div.project#project' + result.id + ' div.details').html("<img src=\"" + result.image + "\" class=\"detailsImage\">" + "<h4>" + result.title + "</h4><h6>" + result.date + "</h6>" + result.summary);
+	var resultHTML = '<img src=\"' + result.image + '\" class=\"detailsImage\">'
+				   + '<h4>' + result.title + '</h4><h6>' + result.date + '</h6>'
+				   + result.summary;
+	$('div.project#project' + result.id + ' div.details').html(resultHTML);
 }
